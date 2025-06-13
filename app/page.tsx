@@ -7,7 +7,7 @@ export default function Home() {
             Your go-to platform for 3D printing files
           </p>
           <h1 className="text-4xl font-bold md:text-5xl">
-            Discover what's possible with 3D Printing
+            Discover what&apos;s possible with 3D Printing
           </h1>
           <p className="text-lg text-gray-600">
             Join our community of creators and explore a vast
