@@ -1,5 +1,6 @@
-import Image from "next/image"
-import homeHeroImage from "@/public/home-hero-image.png"
+import Image from "next/image";
+import Link from "next/link";
+import homeHeroImage from "@/public/home-hero-image.png";
 
 export default function Home() {
   return (
@@ -13,20 +14,24 @@ export default function Home() {
             Discover what&apos;s possible with 3D Printing
           </h1>
           <p className="text-lg text-gray-600">
-            Join our community of creators and explore a vast
-            library of user-submitted models.
+            Join our community of creators and explore a vast library of
+            user-submitted models.
           </p>
 
           <div className="flex gap-4">
-            <button
-              // href="/3d-models"
+            <Link
+              href="/3d-models"
               className="px-6 py-3 text-white transition duration-100 bg-black border-2 border-white hover:bg-white hover:text-black hover:border-black"
             >
               Browse Models
-            </button>
+            </Link>
           </div>
         </div>
-        <Image src={homeHeroImage} alt="PrintForge Community - A group of makers collaborating on 3D printing projects" width={350} />
+        <Image
+          src={homeHeroImage}
+          alt="PrintForge Community - A group of makers collaborating on 3D printing projects"
+          width={350}
+        />
       </section>
     </main>
   );

@@ -1,3 +1,7 @@
 {
- "prettier.tabWidth": 1
+  "editor.formatOnSave": true,
+  "prettier.printWidth": 80,
+  "prettier.jsxSingleQuote": false,
+  "prettier.bracketSameLine": false,
+  "prettier.proseWrap": "always"
 }
