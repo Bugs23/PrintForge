@@ -1,3 +1,6 @@
+import Image from "next/image"
+import homeHeroImage from "@/public/home-hero-image.png"
+
 export default function Home() {
   return (
     <main>
@@ -16,14 +19,14 @@ export default function Home() {
 
           <div className="flex gap-4">
             <button
-              href="/3d-models"
+              // href="/3d-models"
               className="px-6 py-3 text-white transition duration-100 bg-black border-2 border-white hover:bg-white hover:text-black hover:border-black"
             >
               Browse Models
             </button>
           </div>
         </div>
-        <img src="/home-hero-image.png" width={350} />
+        <Image src={homeHeroImage} alt="PrintForge Community - A group of makers collaborating on 3D printing projects" width={350} />
       </section>
     </main>
   );

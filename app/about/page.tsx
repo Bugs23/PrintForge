@@ -1,19 +1,23 @@
+import Image from "next/image"
+import aboutHeroImage from "@/public/about-hero-image.png"
+
 export default function About() {
 	return (
 		<main>
 			<section className="container max-w-4xl px-4 py-8 mx-auto">
 				<div className="grid items-center gap-8 mb-12 md:grid-cols-2">
-					<div className="relative h-[300px] w-full">
-						<img
-							src="/about-hero-image.png"
+					<div className="relative min-h-[300px] w-full">
+						<Image
+							src={aboutHeroImage}
 							alt="PrintForge Community - A group of makers collaborating on 3D printing projects"
-							width="350"
+							width={742}
+							height={742}
+							className="absolute inset-0 w-full h-full object-cover rounded-lg"
 						/>
 					</div>
 					<div>
 						<p
 							className="text-sm text-gray-600 mb-4 uppercase"
-							aria-hidden="true"
 						>
 							About printforge
 						</p>
@@ -35,7 +39,7 @@ export default function About() {
 				</div>
 			</section>
 			<hr className="border-gray-200" aria-hidden="true" />
-			<section className="className" aria-labelledby="key-features">
+			<section className="py-12" aria-labelledby="key-features">
 				<div className="px-6 mx-auto max-w-7xl">
 					<h2 id="key-features" className="sr-only">
 						Key Features
