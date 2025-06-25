@@ -1,13 +1,19 @@
+"use client"
+
 import Image from "next/image"
-import Link from "next/link"
-import printforgeLogoD from "@/public/printforge-logo-d.svg";
-import printforgeLogoM from "@/public/printforge-logo-m.svg";
+import NavLink from "@/app/components/NavLink"
+import printforgeLogoD from "@/public/printforge-logo-d.svg"
+import printforgeLogoM from "@/public/printforge-logo-m.svg"
+import { usePathname } from "next/navigation"
 
 export default function Navbar() {
+
+  const pathname = usePathname()
+
   return (
     <header className="w-full bg-white">
       <nav className="flex justify-between px-6 py-4">
-        <Link href="/">
+        <NavLink href="/">
           <div className="relative">
             {/* Desktop logo */}
             <Image
@@ -23,13 +29,13 @@ export default function Navbar() {
               className="block md:hidden"
             />
           </div>
-        </Link>
+        </NavLink>
         <ul className="flex gap-6 items-center">
           <li>
-            <Link href="/3d-models">3D Models</Link>
+            <NavLink href="/3d-models" isActive={pathname.startsWith("/3d-models")}>3D Models</NavLink>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <NavLink href="/about" isActive={pathname === "/about"}>About</NavLink>
           </li>
         </ul>
       </nav>

@@ -38,7 +38,6 @@ export type ModelDetailPageProps = {
 };
 
 // Components Types
-// Components Types
 export type ModelCardProps = {
   model: Model;
 };
@@ -51,4 +50,10 @@ export type ModelsGridProps = {
 export type PillProps = {
   children: ReactNode;
   className?: string;
+};
+
+export type NavLinkProps = {
+  href: string;
+  isActive?: boolean;
+  children: ReactNode;
 };
