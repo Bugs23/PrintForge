@@ -16,7 +16,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const category = getCategoryBySlug(categoryName)
 
   // Get the models that belong to specified category name
-
   const models = await getModels({ category: categoryName })
 
   return (
